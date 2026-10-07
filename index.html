@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chapter 74 - Legend Of Bribery</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0f0a00;overflow:hidden;font-family:monospace;color:#ffd866}
+#story{position:absolute;inset:0;z-index:99;background:#1a1400;overflow:auto;padding:10px}
+.gold{color:#ffcc00;text-shadow:0 0 6px #ff9900}
+.hud{position:absolute;background:rgba(0,0,0,.85);border:2px solid #ffcc00;border-radius:8px;padding:6px;font-size:11px;z-index:10}
+#hudL{top:5px;left:5px;width:310px}
+#hudR{top:5px;right:5px;width:360px;max-height:92vh;overflow:auto;font-size:10px}
+#map{position:absolute;bottom:5px;right:5px;width:140px;height:140px;background:#000;border:2px solid #ffcc00;z-index:10}
+button{background:#ffcc00;color:#000;border:0;padding:8px 14px;border-radius:6px;font-weight:bold;cursor:pointer;margin:3px}
+</style>
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js"}}</script>
+</head>
+<body>
+<div id="story">
+<h2 class="gold" style="text-align:center">Chapter 74: Legend Of Bribery<br>April 14 2020 - Hare Hawes Johnson And The Rages Band</h2>
+<div style="max-width:850px;margin:8px auto;background:rgba(255,204,0,0.07);border:1px solid #ffcc00;border-radius:6px;padding:8px;white-space:pre-wrap;font-size:10px;line-height:1.4">
+Chapter 1: Introduction To People Summons Help For Robinhood Punish The Treacherous Bribery Of The 7 Strangers Once upon a time there lived a peaceful village of Jethro. There are humble peoples in here together with Robinhood. Hence Robinhood is the humble person. He shared some golds and everything. So that people in Jethro village will not become poorest of all. Until suddenly the 7 strangers are came into the Jethro village. And want to help the people to shared gold for the people just a morning day. After the sunset, all of the golds of people are now faded away. The people shocked in the sunset and figure out what happens to the gold. The people get guilty because it's faded. Now as the story ends the people call for help. They summon the name of Robinhood. Then Robinhood her the lamenting of the people. And because for worship. Robinhood wanted to help the poor people. People said to Robinhood, Here it is we figure out the 7 strangers fade the golds they shared from us. Let them punish in dungeon. As the reaction of Robinhood he understands said by the people. And then Robinhood had a plan in order to find who is the crime. He goes to the oracle. There is a joker here and said, Who are you? Robinhood said, I'm Robinhood and I need your help to find the strangers. And when the joker do now with his oracle. It shows that's the 7 strangers who fade in sunset the golds for the people they shared. As the story ends, The mission of the oracle is to put curse to the strangers. As they do bad in the oracle. They choked it later. Then finally Robinhood seen it and left the oracle of a joker. Robinhood now is trying to find the 7 strangers choke by the joker of the oracle. Robinhood said, Hah! At last I already find the 7 strangers. I must put them in the dungeon to commit a sinful crime. Then the people became peaceful that Robinhood save it. What he done the people cheer to Robinhood as the brave consultant of the slave. And they crave already the democracy together with the oracle of the joker. Moral Lesson: Telling lies of sharing hopes to the people is bad. Be humble to share the gifts of the poor. So that don't believe in strangers. If you believe the strangers is good. Don't doubt if all of it is imagination. Then the meaningful things will lost for you.
+</div>
+<center><p class="gold">Jethro Village Peaceful Humble Peoples Robinhood Shared Golds Not Poorest | 7 Strangers Came Shared Gold Morning Day After Sunset Golds Faded Away Shocked Guilty | People Call Help Summons Robinhood Lamenting Worship Help Poor | Robinhood Plan Find Crime Goes Oracle Joker Who Are You I'm Robinhood Need Help Find Strangers Oracle Shows 7 Strangers Fade Sunset Golds Shared | Mission Oracle Put Curse Strangers Choked Do Bad Oracle | Hah At Last I Already Find 7 Strangers Must Put Them Dungeon Commit Sinful Crime People Peaceful Cheer Brave Consultant Slave Crave Democracy Together Oracle Joker | Moral Telling Lies Sharing Hopes People Bad Be Humble Share Gifts Poor Don't Believe Strangers If Believe Strangers Good Don't Doubt If All Imagination Then Meaningful Things Lost</p>
+<p style="font-size:10px">WASD Move Robinhood | E Share Golds Humble | Q Dungeon Punish | Click Attack Bribery</p>
+<button onclick="start()" style="font-size:18px;padding:12px 28px">PLAY NOW - LEGEND OF BRIBERY ULTRA LIGHT</button></center>
+</div>
+
+<div class="hud" id="hudL">
+<div class="gold">Robinhood Humble Lv <span id="lv">1</span> - Jethro Village</div>
+<div>Gold Shared - Not Poorest - Humble Share Gifts Poor</div><div style="background:#000;height:10px;border:1px solid #fc0"><div id="hp" style="width:50%;height:100%;background:#fc0"></div></div>
+<div>Justice - Dungeon Punish Sinful Crime 7 Strangers Bribery</div><div style="background:#000;height:10px;border:1px solid #fc0"><div id="just" style="width:20%;height:100%;background:#f80"></div></div>
+<div>Oracle Curse - Joker Oracle Choked Curse Strangers</div><div style="background:#000;height:10px;border:1px solid #fc0"><div id="oracle" style="width:25%;height:100%;background:#8f8"></div></div>
+</div>
+<div class="hud" id="hudR">
+<div class="gold" id="qm">MAIN: Jethro Village Robinhood Humble Shared Golds 7 Strangers Fade Sunset</div>
+<div id="qd">Peaceful village Jethro humble peoples together with Robinhood Hence Robinhood is humble person He shared some golds and everything So that people in Jethro village will not become poorest of all Until suddenly 7 strangers are came into Jethro village And want to help people to shared gold for people just morning day After sunset all golds of people are now faded away People shocked in sunset figure out what happens to gold People get guilty because it's faded Now story ends people call for help They summon name of Robinhood Then Robinhood her lamenting of people And because for worship Robinhood wanted to help poor people People said to Robinhood Here it is we figure out 7 strangers fade golds they shared from us Let them punish in dungeon As reaction Robinhood he understands said by people And then Robinhood had plan in order to find who is crime He goes to oracle There is joker here and said Who are you Robinhood said I'm Robinhood and I need your help to find strangers And when joker do now with his oracle It shows that's 7 strangers who fade in sunset golds for people they shared As story ends Mission oracle is to put curse to strangers As they do bad in oracle They choked it later Then finally Robinhood seen it and left oracle of joker Robinhood now trying to find 7 strangers choke by joker of oracle Robinhood said Hah At last I already find 7 strangers I must put them in dungeon to commit sinful crime Then people became peaceful that Robinhood save it What he done people cheer to Robinhood as brave consultant of slave And they crave already democracy together with oracle of joker Moral Telling lies of sharing hopes to people is bad Be humble to share gifts of poor So that don't believe in strangers If you believe strangers is good Don't doubt if all of it is imagination Then meaningful things will lost for you</div>
+<hr><div id="qs" style="font-size:9px"></div>
+</div>
+<canvas id="map"></canvas>
+
+<script type="module">
+import * as THREE from 'three';
+let scene,camera,renderer,player,keys={};
+let ST={gold:50,justice:20,oracle:25,lv:1};
+let golds=[],enemies=[],npcs=[];
+window.start=()=>{document.getElementById('story').style.display='none';init();};
+function init(){
+scene=new THREE.Scene();scene.background=new THREE.Color(0x0f0a00);
+camera=new THREE.PerspectiveCamera(70,innerWidth/innerHeight,0.1,100);
+renderer=new THREE.WebGLRenderer({antialias:false});renderer.setSize(innerWidth,innerHeight);document.body.appendChild(renderer.domElement);
+scene.add(new THREE.AmbientLight(0xffffff,0.9));
+let ground=new THREE.Mesh(new THREE.PlaneGeometry(100,100),new THREE.MeshBasicMaterial({color:0x201800}));ground.rotation.x=-1.57;scene.add(ground);
+for(let i=0;i<8;i++){let b=new THREE.Mesh(new THREE.BoxGeometry(2,1.5,2),new THREE.MeshBasicMaterial({color:0x332200}));b.position.set((Math.random()-0.5)*40,0.75,(Math.random()-0.5)*40);if(Math.abs(b.position.x)<7&&Math.abs(b.position.z)<7)continue;scene.add(b);}
+let g=new THREE.Group();
+let body=new THREE.Mesh(new THREE.CapsuleGeometry(0.3,0.6,2,4),new THREE.MeshBasicMaterial({color:0x2e8b57}));body.position.y=0.7;g.add(body);
+g.position.set(0,0,8);scene.add(g);player=g;
+function addNPC(x,z,name,txt,col){let m=new THREE.Mesh(new THREE.CapsuleGeometry(0.25,0.5,2,4),new THREE.MeshBasicMaterial({color:col}));m.position.set(x,0.5,z);m.userData={txt:txt};scene.add(m);npcs.push(m);}
+addNPC(-6,0,"Jethro Village Humble Peoples Robinhood Shared Golds Not Poorest","Peaceful village Jethro humble peoples together with Robinhood Hence Robinhood is humble person He shared some golds and everything So that people in Jethro village will not become poorest of all Until suddenly 7 strangers are came into Jethro village And want to help people to shared gold for people just morning day After sunset all golds of people are now faded away People shocked in sunset figure out what happens to gold People get guilty because it's faded Now story ends people call for help They summon name of Robinhood Then Robinhood her lamenting of people And because for worship Robinhood wanted to help poor people",0xffcc00);
+addNPC(6,0,"Oracle Joker Who Are You I'm Robinhood Need Help Find Strangers Curse Choked","He goes to oracle There is joker here and said Who are you Robinhood said I'm Robinhood and I need your help to find strangers And when joker do now with his oracle It shows that's 7 strangers who fade in sunset golds for people they shared As story ends Mission oracle is to put curse to strangers As they do bad in oracle They choked it later Then finally Robinhood seen it and left oracle of joker Robinhood now is trying to find 7 strangers choke by joker of oracle Robinhood said Hah At last I already find 7 strangers I must put them in dungeon to commit sinful crime",0x66ff66);
+addNPC(0,6,"People Cheer Brave Consultant Slave Democracy Together Oracle Joker","People said to Robinhood Here it is we figure out 7 strangers fade golds they shared from us Let them punish in dungeon As reaction Robinhood he understands said by people People became peaceful that Robinhood save it What he done people cheer to Robinhood as brave consultant of slave And they crave already democracy together with oracle of joker Moral Telling lies sharing hopes to people is bad Be humble to share gifts poor So that don't believe in strangers If you believe strangers is good Don't doubt if all of it is imagination Then meaningful things will lost for you",0x66ccff);
+for(let i=0;i<14;i++){let go=new THREE.Mesh(new THREE.SphereGeometry(0.25,4,4),new THREE.MeshBasicMaterial({color:0xffcc00}));go.position.set((Math.random()-0.5)*20,0.25,(Math.random()-0.5)*20);scene.add(go);golds.push(go);}
+for(let i=0;i<7;i++){let en=new THREE.Mesh(new THREE.BoxGeometry(0.6,0.8,0.6),new THREE.MeshBasicMaterial({color:0x550000}));en.position.set((Math.random()-0.5)*18,0.4,(Math.random()-0.5)*18-8);en.userData={hp:50};scene.add(en);enemies.push(en);}
+window.addEventListener('keydown',e=>{keys[e.key.toLowerCase()]=true;let k=e.key.toLowerCase();if(k=='e'){ST.gold=Math.min(100,ST.gold+18);ST.oracle=Math.min(100,ST.oracle+8);}if(k=='q'){ST.justice=Math.min(100,ST.justice+18);}});
+window.addEventListener('keyup',e=>keys[e.key.toLowerCase()]=false);
+window.addEventListener('mousedown',()=>{enemies.forEach((en,i)=>{if(en.position.distanceTo(player.position)<2.3){en.userData.hp-=35;if(en.userData.hp<=0){scene.remove(en);enemies.splice(i,1);ST.justice+=14;ST.gold+=8;if(enemies.length==0)win();}}});});
+renderer.domElement.addEventListener('click',()=>renderer.domElement.requestPointerLock());
+window.addEventListener('mousemove',e=>{if(document.pointerLockElement)player.rotation.y-=e.movementX*0.004;});
+loop();
+}
+function win(){
+document.getElementById('qm').innerText="LEGEND OF BRIBERY - JUSTICE - DUNGEON - PEACEFUL!";
+document.getElementById('qd').innerHTML="Robinhood said, Hah! At last I already find the 7 strangers. I must put them in the dungeon to commit a sinful crime. Then the people became peaceful that Robinhood save it. What he done the people cheer to Robinhood as the brave consultant of the slave. And they crave already the democracy together with the oracle of the joker.<br><b>Moral: Telling lies of sharing hopes to the people is bad. Be humble to share the gifts of the poor. So that don't believe in strangers. If you believe the strangers is good. Don't doubt if all of it is imagination. Then the meaningful things will lost for you.</b>";
+setTimeout(()=>alert("YOU WIN Chapter 74 Legend Of Bribery! Jethro Village Peaceful Robinhood Humble Shared Golds Not Poorest 7 Strangers Came Shared Gold Morning After Sunset Golds Faded Shocked Guilty People Call Help Summons Robinhood Lamenting Worship Help Poor Figure Out 7 Strangers Fade Golds Punish Dungeon Robinhood Plan Find Crime Goes Oracle Joker Who Are You I'm Robinhood Need Help Find Strangers Oracle Shows 7 Strangers Fade Sunset Golds Shared Mission Oracle Put Curse Strangers Choked Do Bad Oracle Hah At Last I Already Find 7 Strangers Must Put Them Dungeon Commit Sinful Crime People Peaceful Cheer Brave Consultant Slave Crave Democracy Together Oracle Joker Moral Telling Lies Sharing Hopes People Bad Be Humble Share Gifts Poor Don't Believe Strangers If Believe Strangers Good Don't Doubt If All Imagination Then Meaningful Things Lost"),600);
+}
+function loop(){
+requestAnimationFrame(loop);
+let sp=0.16;
+if(keys['w'])player.translateZ(-sp);
+if(keys['s'])player.translateZ(sp*0.6);
+if(keys['a'])player.translateX(-sp*0.6);
+if(keys['d'])player.translateX(sp*0.6);
+golds.forEach((g,i)=>{if(g.position.distanceTo(player.position)<1.4){scene.remove(g);golds.splice(i,1);ST.gold=Math.min(100,ST.gold+10);}});
+enemies.forEach(en=>{if(en.position.distanceTo(player.position)<14){en.lookAt(player.position);let d=new THREE.Vector3().subVectors(player.position,en.position).normalize().multiplyScalar(0.02);en.position.add(d);if(en.position.distanceTo(player.position)<1.2)ST.gold=Math.max(0,ST.gold-0.12);}});
+camera.position.copy(player.position).add(new THREE.Vector3(0,3,6).applyQuaternion(player.quaternion));camera.lookAt(player.position);
+document.getElementById('hp').style.width=ST.gold+'%';
+document.getElementById('just').style.width=ST.justice+'%';
+document.getElementById('oracle').style.width=ST.oracle+'%';
+document.getElementById('qs').innerHTML=`Gold ${Math.round(ST.gold)}% Humble Share Gifts Poor Not Poorest - Collect Golds Faded Sunset<br>Justice ${Math.round(ST.justice)}% Dungeon Punish Sinful Crime 7 Strangers Treacherous Bribery<br>Oracle ${Math.round(ST.oracle)}% Joker Oracle Curse Choked Mission Put Curse Strangers<br>Golds ${golds.length} Faded Away After Sunset Shocked Guilty - Collect<br>Enemies ${enemies.length}/7 Strangers Fade Golds Shared Morning After Sunset Faded - Hah At Last Find 7 Strangers Dungeon<br>E Share Golds Humble Gifts Poor, Q Dungeon Punish Sinful Crime<br>Goal Justice 70%+ Gold 60%+ Defeat 7 Strangers Dungeon Peaceful Democracy`;
+let ctx=document.getElementById('map').getContext('2d');ctx.fillStyle='#000';ctx.fillRect(0,0,140,140);ctx.fillStyle='#fc0';ctx.fillRect(70+player.position.x*2,70+player.position.z*2,4,4);enemies.forEach(en=>{ctx.fillStyle='#f00';ctx.fillRect(70+en.position.x*2,70+en.position.z*2,3,3);});golds.forEach(g=>{ctx.fillStyle='#ff0';ctx.fillRect(70+g.position.x*2,70+g.position.z*2,2,2);});
+if(ST.gold<=0){alert('Game Over! Golds Faded Away Sunset 7 Strangers Bribery! Be Humble Share Gifts Poor Dont Believe Strangers!');location.reload();}
+renderer.render(scene,camera);
+}
+</script>
+</body>
+</html>
